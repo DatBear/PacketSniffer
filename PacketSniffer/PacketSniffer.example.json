@@ -1,0 +1,22 @@
+{
+  "autoSave": true,
+  "filter": "(port 6112 or port 4000) and ((ip[2:2] - ((ip[0] & 0x0f) * 4) - (((tcp[12] & 0xf0) / 0x10) * 4) > 0))",
+  "deviceIp": "192.168.0.13",
+  "watchedPackets": [
+  	{
+  		"startByte": "5E",
+  		"foregroundColor": 1,
+  		"backgroundColor": 15
+  	}
+  ],
+  "packetInfoSettings": {
+    "direction": true,
+    "tcpLength": true,
+    "sourceIp": true,
+    "destIp": true,
+    "sourcePort": false,
+    "destPort": false,
+    "timestamp": true,
+    "timestampFormat": null
+  }
+}
